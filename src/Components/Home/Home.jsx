@@ -1,9 +1,15 @@
+import { Outlet } from "react-router-dom";
+import Navbar from "../Navbar/Navbar";
+import Footer from "../Footer/Footer";
 
 
 const Home = () => {
     return (
         <div>
-            <h3>This is my home, but i cannot live here</h3>
+
+            <Navbar></Navbar>
+            <Outlet></Outlet>
+            <Footer></Footer>
         </div>
     );
 };
