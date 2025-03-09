@@ -3,13 +3,14 @@ import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
 
 
-const Home = () => {
+const Root = () => {
     return (
         <div>
-
-            <h3>This is home sectoin</h3>
+            <Navbar></Navbar>
+            <Outlet></Outlet>
+            <Footer></Footer>
         </div>
     );
 };
 
-export default Home;
+export default Root;
