@@ -1,14 +1,14 @@
 import { Link, Outlet } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
-
+import wave from '../../assets/wave.svg'
 
 const Home = () => {
     return (
         <div>
 
-            <div className="hero bg-base-200 min-h-[calc(100vh-120px)] border-2 border-red-500">
-                <div className="hero-content text-center">
+            <div className="hero bg-base-200 min-h-[calc(100vh-120px)]  relative">
+                <div className="hero-content text-center -mt-18">
                     <div className="max-w-lg">
                         <h1 className="text-5xl font-bold">Welcome to <span className="text-secondary">ByteBlaze</span></h1>
                         <p className="py-6">
@@ -27,9 +27,14 @@ const Home = () => {
                             </Link>
 
                         </div>
+                        
                     </div>
+                    
                 </div>
+                <img src={wave} alt="" className="absolute bottom-0 w-full"/>
+                
             </div>
+            
         </div>
     );
 };
