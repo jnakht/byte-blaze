@@ -11,7 +11,7 @@ const Content = () => {
     console.log("HTML Content:", body_html); // Debugging
 
     return (
-        <div className="mx-auto group bg-gray-900 dark:bg-gray-50 border-2 border-primary border-opacity-30"> 
+        <div className="mx-auto group bg-gray-900 dark:bg-gray-50 border-2 border-primary border-opacity-30 p-2"> 
             <img role="presentation" className="object-cover w-full rounded h-44 bg-gray-500 dark:bg-gray-500" src={cover_image || altImg} />
             
             <div>
