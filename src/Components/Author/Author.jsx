@@ -1,10 +1,14 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigation } from "react-router-dom";
+import LoaderSpinner from "../LoaderSpinner/LoaderSpinner";
 
 
 const Author = () => {
+	const navigation = useNavigation();
+	
     const blog = useLoaderData();
     const {user} = blog;
     const {github_username, name, profile_image, twitter_username, username} = user;
+	if (navigation.state === 'loading') return <LoaderSpinner></LoaderSpinner>
     return (
         <div className="flex flex-col justify-center max-w-[45vw] p-6 shadow-md rounded-xl sm:px-12 dark:bg-gray-50 dark:text-gray-800 mx-auto">
 	<img src={profile_image} alt="" className="w-32 h-32 mx-auto rounded-full dark:bg-gray-500 aspect-square" />
