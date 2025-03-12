@@ -32,4 +32,10 @@ const saveAllToLocalStorage = existing => {
     localStorage.setItem('blogs', JSON.stringify(existing));
 }
 
-export {saveBlogToLocalStorage, getFromLocalStorage}
+const deleteFromLocalStorage = (id) => {
+    const existing = getFromLocalStorage();
+    const newBookmarks = existing.filter(blog => blog.id !== id);
+    saveAllToLocalStorage(newBookmarks);
+}
+
+export {saveBlogToLocalStorage, getFromLocalStorage, deleteFromLocalStorage}

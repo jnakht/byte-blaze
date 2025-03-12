@@ -2,10 +2,13 @@ import { Link } from "react-router-dom";
 import altImage from '../../assets/404.jpg'
 import { MdDelete } from "react-icons/md";
 import toast from "react-hot-toast";
-const BlogCard = ({ blog, isdelete }) => {
+import { deleteFromLocalStorage } from "../../Utility/Utility";
+const BlogCard = ({ blog, isdelete, changeState, setChangeState }) => {
     const { cover_image, title, id, published_at, description } = blog;
     console.log('this is the id: ', id)
     const handleDeleteBookmark = () => {
+        deleteFromLocalStorage(id);
+        setChangeState(!changeState);
         toast.success('Successfully Deleted');
     }
     return (
