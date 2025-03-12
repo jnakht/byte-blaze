@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, Outlet, useLoaderData } from "react-router-dom";
-
+import { FaBookmark } from "react-icons/fa";
 
 const DetailedBlog = () => {
     const blog = useLoaderData();
@@ -38,8 +38,12 @@ const DetailedBlog = () => {
                                 </svg>
                                 <span>Author</span>
                             </Link>
-                           
+                            <div className="bg-[#C9B3FF] flex justify-center items-center ml-8 p-4 rounded-full">
+                            <FaBookmark className=" text-xl text-[#FF00D3] " />
+                            </div>
                         </div>
+                        
+
                     </div>
                     <div className="dark:text-gray-800">
                        <Outlet></Outlet>

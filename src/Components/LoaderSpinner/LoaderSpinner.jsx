@@ -6,6 +6,8 @@ const LoaderSpinner = () => {
             {/* loader spinner */}
             <ScaleLoader 
             color="#FF6B6B"
+            height={100}
+            width={10}
              />
         </div>
     );
