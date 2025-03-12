@@ -12,12 +12,12 @@ const Bookmarks = () => {
         setbookmarks(blogs);
     } ,[changeState])
     return (
-        <div className="min-h-[calc(100vh-120px)]">
+        <div className="min-h-[calc(100vh-140px)]">
             {
                 bookmarks.length === 0 && <NoBookmark></NoBookmark>
             }
             
-            <div className="grid grid-cols-3 max-w-[80vw] mx-auto gap-8 p-6 ">
+            <div className="grid grid-cols-3 max-w-[80vw] mx-auto gap-8 p-6 mt-5">
             {
                 bookmarks.map(bookmark => <BlogCard changeState={changeState} setChangeState={setChangeState} isdelete={true} blog={bookmark}></BlogCard>)
             }

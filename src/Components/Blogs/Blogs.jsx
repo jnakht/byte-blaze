@@ -28,7 +28,7 @@ const Blogs = () => {
                        
                        
                     {
-                        blogs.map(blog => <BlogCard blog={blog}></BlogCard>)
+                        blogs.slice(1).map(blog => <BlogCard blog={blog}></BlogCard>)
                     } 
                        
                        
