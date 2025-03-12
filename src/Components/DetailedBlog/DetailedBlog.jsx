@@ -11,7 +11,7 @@ const DetailedBlog = () => {
     const handleBookmark = () => {
         console.log('this is the blog to store on localstrage', blog)
         saveBlogToLocalStorage(blog);
-        toast.success('Bookmarked Successfully');
+        
     }
     const [activeCard, setActiveCard] = useState(0);
     return (

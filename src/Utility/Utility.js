@@ -1,3 +1,4 @@
+import toast from "react-hot-toast";
 
 const getFromLocalStorage = () => {
     const blogs = localStorage.getItem('blogs');
@@ -19,6 +20,10 @@ const saveBlogToLocalStorage = blog => {
     // console.log('there exist some data on localstorage: ', isExist)
     if (!isExist) {
         existing.push(blog);
+        toast.success('Bookmarked Successfully');
+    }
+    else {
+        toast.error('Already Bookmarked');
     }
     saveAllToLocalStorage(existing);
 }
