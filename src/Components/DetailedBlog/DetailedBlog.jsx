@@ -1,12 +1,15 @@
 import { useState } from "react";
 import { Link, Outlet, useLoaderData } from "react-router-dom";
 import { FaBookmark } from "react-icons/fa";
+import toast from "react-hot-toast";
 
 const DetailedBlog = () => {
     const blog = useLoaderData();
     const { title, id, reading_time_minutes, readable_publish_date, comments_count, positive_reactions_count } = blog;
     console.log(blog)
-
+    const handleToast = () => {
+        toast.success('Bookmarked Successfully');
+    }
     const [activeCard, setActiveCard] = useState(0);
     return (
         <div>
@@ -38,9 +41,9 @@ const DetailedBlog = () => {
                                 </svg>
                                 <span>Author</span>
                             </Link>
-                            <div className="bg-[#C9B3FF] flex justify-center items-center ml-8 p-4 rounded-full">
+                            <button onClick={handleToast} className="bg-[#C9B3FF] flex justify-center items-center ml-8 p-4 rounded-full">
                             <FaBookmark className=" text-xl text-[#FF00D3] " />
-                            </div>
+                            </button>
                         </div>
                         
 
